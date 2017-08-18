@@ -11,14 +11,15 @@ text_to_speech = TextToSpeechV1(
 
 
 def tts(message):
-    with open('output.wav',
+  try:
+    with open('temp//output.wav',
               'wb') as audio_file:
         audio_file.write(
             text_to_speech.synthesize(message, accept='audio/wav',
                                   voice="en-US_AllisonVoice"))
 
     chunk = 1024
-    f = wave.open(r"output.wav","rb")
+    f = wave.open(r"temp//output.wav","rb")
     p = pyaudio.PyAudio()
     stream = p.open(format = p.get_format_from_width(f.getsampwidth()),
                     channels = f.getnchannels(),
@@ -35,3 +36,5 @@ def tts(message):
     stream.close()
 
     p.terminate()
+  except:
+      pass
