@@ -9,6 +9,7 @@ from threading import Thread
 
 
 root = Tk()
+root.iconbitmap("res//icon.ico")
 root.resizable(FALSE,FALSE)
 root.title("Spirit Assistant")
 style = ttk.Style()
