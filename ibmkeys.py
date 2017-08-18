@@ -1,0 +1,6 @@
+bing_speech_key = ""
+wolf_id = ""
+vrun = ""
+vrpw = ""
+IBM_TTS_un = ""
+IBM_TTS_pw = ""
